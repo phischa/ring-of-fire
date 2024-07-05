@@ -1,5 +1,8 @@
 @for(player of game.players; track player; let i = $index) {
-<app-player [ngStyle]="{'top.px': 80 + (i * 88)}" [name]="player" class="player-position"></app-player>
+<app-player [ngStyle]="{'top.px': 80 + (i * 88)}" 
+[playerActive]="i == game.currentPlayer"
+[name]="player" 
+class="player-position"></app-player>
 }
 
 <div class="field">
@@ -16,6 +19,8 @@
         }
     </div>
 </div>
+
+<app-game-info class="pin-bottom" ></app-game-info>
 
 <button (click)="openDialog()" mat-fab aria-label="Example icon button with a delete icon" class="btn-add">
     <mat-icon>add</mat-icon>

@@ -20,7 +20,7 @@ class="player-position"></app-player>
     </div>
 </div>
 
-<app-game-info class="pin-bottom" ></app-game-info>
+<app-game-info [card]="currentCard" class="pin-bottom" ></app-game-info>
 
 <button (click)="openDialog()" mat-fab aria-label="Example icon button with a delete icon" class="btn-add">
     <mat-icon>add</mat-icon>
